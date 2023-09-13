@@ -536,6 +536,19 @@ nav li a {
   margin-bottom: 15px;
 }
 
+/** --- PURCHASE --- **/
+.purchase {
+  margin-block: 60px;
+}
+
+.purchase .pricing {
+  margin-top: 72px;
+}
+
+.purchase > .img-container {
+  margin-inline: -15px;
+}
+
 @media screen and (min-width: 640px) {
   body {
     background: url('../assets/images/top-background-tablet.png') no-repeat right top,
@@ -790,6 +803,31 @@ nav li a {
 
   .faq-answer p {
     margin-bottom: 20px;
+  }
+
+  /** --- PURCHASE --- **/
+  .purchase {
+    margin-block: 50px 100px;
+  }
+
+  .purchase .pricing {
+    margin-top: 66px;
+    display: block;
+    width: 67%;
+    margin-inline: auto;
+  }
+
+  .purchase > .img-container {
+    margin-inline: -40px;
+  }
+
+  .purchase .pricing .subscriptions {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .purchase .pricing .table-section {
+    margin-top: 30px;
   }
 }
 
@@ -1066,5 +1104,33 @@ nav li a {
 
   .faq-answer p {
     margin-bottom: 20px;
+  }
+
+  /** --- PURCHASE --- **/
+  .purchase {
+    margin-block: 145px 156px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 90px;
+  }
+
+  .purchase .pricing {
+    margin-top: 0;
+    width: unset;
+    margin-inline: unset;
+  }
+
+  .purchase > .img-container {
+    margin-inline: 0;
+    width: 49%;
+  }
+
+  .purchase .pricing .subscriptions {
+  }
+
+  .purchase .pricing .table-section {
+    margin-top: 50px;
+    padding-inline: 32px;
   }
 }

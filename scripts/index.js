@@ -6,10 +6,37 @@ const specificationsItems = document.querySelector('.specifications .items');
 const specificationsTrigger = document.querySelector('.specifications .more-btn');
 const faqItems = document.querySelectorAll('.faq-item');
 const faqTriggers = document.querySelectorAll('.faq-question');
+const introductionLink = document.querySelector('#introduction-link');
+const specificationsLink = document.querySelector('#specifications-link');
+const purchaseLink = document.querySelector('#purchase-link');
+const namavaDeviceComponent = document.querySelector('.namava-tv-device');
+const specificationsComponent = document.querySelector('.device-specifications');
+const purchaseComponent = document.querySelector('.purchase');
 
 let lastScroll = 0;
 
-// VIDEO
+// ** NAV
+handleNavScroll = () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= 0) {
+    body.classList.remove('scroll-up');
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+    body.classList.remove('scroll-up');
+    body.classList.add('scroll-down');
+  }
+
+  if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
+    body.classList.remove('scroll-down');
+    body.classList.add('scroll-up');
+  }
+
+  lastScroll = currentScroll;
+};
+
+// ** VIDEO
 const handlePlayVideo = () => {
   if (video.paused) {
     videoPlayBtn.classList.add('hide');
@@ -25,12 +52,12 @@ const handleVideoEnd = () => {
   }
 };
 
-// SPECIFICATIONS EXPAND
+// ** SPECIFICATIONS EXPAND
 const handleExpandCollapse = () => {
   specificationsItems.classList.toggle('expanded');
 };
 
-// FAQ
+// ** FAQ
 const handleToggleFaq = (e) => {
   const clickedFaqItem = e.target.closest('.faq-item');
   if (!clickedFaqItem) return;
@@ -55,6 +82,7 @@ const handleToggleFaq = (e) => {
   });
 };
 
+// **Events
 videoPlayBtn.addEventListener('click', handlePlayVideo);
 video.addEventListener('timeupdate', handleVideoEnd);
 
@@ -64,22 +92,16 @@ faqTriggers.forEach((faqTrigger) =>
   faqTrigger.addEventListener('click', handleToggleFaq),
 );
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
+window.addEventListener('scroll', handleNavScroll);
 
-  if (currentScroll <= 0) {
-    body.classList.remove('scroll-up');
-  }
+introductionLink.addEventListener('click', () => {
+  namavaDeviceComponent.scrollIntoView({block: 'center', behavior: 'smooth'});
+});
 
-  if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
-    body.classList.remove('scroll-up');
-    body.classList.add('scroll-down');
-  }
+specificationsLink.addEventListener('click', () => {
+  specificationsComponent.scrollIntoView({block: 'center', behavior: 'smooth'});
+});
 
-  if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
-    body.classList.remove('scroll-down');
-    body.classList.add('scroll-up');
-  }
-
-  lastScroll = currentScroll;
+purchaseLink.addEventListener('click', () => {
+  purchaseComponent.scrollIntoView({block: 'center', behavior: 'smooth'});
 });
