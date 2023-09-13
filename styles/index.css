@@ -53,11 +53,6 @@
     url('./../assets/fonts/ttf/iy_extrablack.ttf') format('truetype');
 }
 
-:root {
-  --md: 640px;
-  --lg: 1280px;
-}
-
 /** --- RESET --- **/
 
 * {
@@ -262,6 +257,7 @@ nav li a {
   line-height: 21px;
   color: #fff;
 }
+
 .pricing .table .row .label {
   font-size: 12px;
   font-weight: 400;
@@ -311,9 +307,11 @@ nav li a {
 .namava-tv-device {
   margin-top: 40px;
 }
+
 .namava-tv-device .img-container {
   margin-inline: -15px;
 }
+
 .namava-tv-device .text-container .body-text {
   margin-top: 16px;
 }
@@ -351,16 +349,19 @@ nav li a {
   grid-template-columns: repeat(2, auto);
   row-gap: 42px;
 }
+
 .config-logos .item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
+
 .config-logos img {
   width: 120px;
   height: 120px;
 }
+
 .config-logos .item-title {
   font-size: 12px;
   font-weight: 700;
@@ -389,12 +390,15 @@ nav li a {
 .android-tv {
   margin-top: 60px;
 }
+
 .android-tv .img-container {
   margin-inline: -15px;
 }
+
 .android-tv .text-container {
   margin-top: 12px;
 }
+
 .android-tv .text-container .body-text {
   margin-top: 16px;
 }
@@ -403,12 +407,15 @@ nav li a {
 .watch-online {
   margin-top: 40px;
 }
+
 .watch-online .img-container {
   margin-inline: -15px;
 }
+
 .watch-online .text-container {
   margin-top: 12px;
 }
+
 .watch-online .text-container .body-text {
   margin-top: 16px;
 }
@@ -558,6 +565,7 @@ nav li a {
   .container {
     padding-inline: 40px;
   }
+
   .title {
     font-size: 16px;
     line-height: 28px;
@@ -732,33 +740,18 @@ nav li a {
   }
 
   .specifications .items {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .specifications .items .item {
-    /* flex: 0.5; */
     width: calc(50% - 20px);
     height: min-content;
   }
 
-  .specifications .items .item-title {
-  }
-
-  .specifications .items .item-values {
-  }
-
-  .specifications .items .item-values .value {
-  }
-
   .specifications .more-btn {
     margin-top: 24px;
-  }
-
-  .specifications .more-btn svg {
   }
 
   .specifications .items {
@@ -842,6 +835,7 @@ nav li a {
     margin-inline: auto;
     max-width: 1180px;
   }
+
   .title {
     font-size: 20px;
     line-height: 34px;
@@ -870,10 +864,12 @@ nav li a {
     align-items: center;
     gap: 24px;
   }
+
   .short-intro .img-container {
     margin-inline: 0;
     width: 580px;
   }
+
   .short-intro .text-container {
     flex: 1;
     margin-inline-start: 95px;
@@ -883,6 +879,7 @@ nav li a {
     margin-bottom: 24px;
     text-align: start;
   }
+
   .short-intro .text-container .body-text {
     text-align: start;
   }
@@ -936,20 +933,6 @@ nav li a {
     font-size: 16px;
   }
 
-  .pricing .table .row .price {
-  }
-  .pricing .table .row .label {
-  }
-
-  .pricing .table .row .payable {
-  }
-
-  .pricing .table .row .discount-tag {
-  }
-
-  .table-section .btn-link {
-  }
-
   .table-section .btn-link span {
     font-size: 14px;
   }
@@ -965,9 +948,11 @@ nav li a {
     width: 780px;
     margin-inline: auto;
   }
+
   .namava-tv-device .img-container {
     margin-inline: 0;
   }
+
   .namava-tv-device .text-container .body-text {
     margin-top: 24px;
   }
@@ -980,15 +965,6 @@ nav li a {
     margin-inline: auto;
   }
 
-  .device-video video {
-  }
-
-  .device-video .play-btn {
-  }
-
-  .device-video .play-btn svg {
-  }
-
   /** --- CONFIG-LOGOS --- **/
   .config-logos {
     display: flex;
@@ -996,10 +972,7 @@ nav li a {
     width: 980px;
     margin-inline: auto;
   }
-  .config-logos .item {
-  }
-  .config-logos img {
-  }
+
   .config-logos .item-title {
     font-size: 16px;
     line-height: 27px;
@@ -1010,15 +983,6 @@ nav li a {
     margin-top: 136px;
     gap: 120px;
     margin-inline: 120px 200px;
-  }
-
-  .remote-control .img-container {
-  }
-
-  .remote-control .text-container {
-  }
-
-  .remote-control .text-container .title {
   }
 
   .remote-control .text-container .body-text {
@@ -1033,10 +997,12 @@ nav li a {
     gap: 112px;
     margin-inline-end: 90px;
   }
+
   .android-tv .img-container {
     margin-inline: 0;
     width: 590px;
   }
+
   .android-tv .text-container {
     width: 100%;
     margin-inline: 0;
@@ -1056,13 +1022,16 @@ nav li a {
   .watch-online {
     margin-top: 0;
   }
+
   .watch-online .img-container {
     margin-inline: 0;
   }
+
   .watch-online .text-container {
     margin-top: -110px;
     width: 500px;
   }
+
   .watch-online .text-container .body-text {
     margin-top: 24px;
   }
@@ -1124,9 +1093,6 @@ nav li a {
   .purchase > .img-container {
     margin-inline: 0;
     width: 49%;
-  }
-
-  .purchase .pricing .subscriptions {
   }
 
   .purchase .pricing .table-section {
