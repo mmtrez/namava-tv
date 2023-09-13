@@ -2,7 +2,7 @@
 const body = document.body;
 const video = document.querySelector('.device-video video');
 const videoPlayBtn = document.querySelector('.device-video .play-btn');
-const specificationsItems = document.querySelector('.specifications .items');
+const specificationsItems = document.querySelector('.specifications .columns');
 const specificationsTrigger = document.querySelector('.specifications .more-btn');
 const faqItems = document.querySelectorAll('.faq-item');
 const faqTriggers = document.querySelectorAll('.faq-question');
@@ -53,8 +53,20 @@ const handleVideoEnd = () => {
 };
 
 // ** SPECIFICATIONS EXPAND
-const handleExpandCollapse = () => {
-  specificationsItems.classList.toggle('expanded');
+const handleExpandCollapse = (e) => {
+  const trigger = e.target.closest('.more-btn');
+  let triggerText = trigger.querySelector('span');
+
+  // rotate chev icon
+  trigger.classList.toggle('expanded');
+
+  if (specificationsItems.style.maxHeight) {
+    specificationsItems.style.maxHeight = null;
+    triggerText.textContent = 'اطلاعات بیشتر';
+  } else {
+    specificationsItems.style.maxHeight = specificationsItems.scrollHeight + 'px';
+    triggerText.textContent = 'بستن';
+  }
 };
 
 // ** FAQ

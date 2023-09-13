@@ -335,6 +335,7 @@ nav li a {
   place-content: center;
   transition: 300ms opacity, 300ms visibility;
   will-change: opacity, visibility;
+  cursor: pointer;
 }
 
 .device-video .play-btn svg {
@@ -423,7 +424,6 @@ nav li a {
 /** --- DEVICE-SPECIFICATIONS --- **/
 .device-specifications {
   margin-top: 70px;
-  display: none;
 }
 
 .specifications {
@@ -432,24 +432,39 @@ nav li a {
 
 .specifications {
   background-color: #121212;
-  padding: 20px 14px;
+  padding-inline: 14px;
+  padding-block: 20px 28px;
   margin-inline: -15px;
 }
 
-.specifications .items {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.specifications .columns {
+  overflow: hidden;
+  max-height: 295px;
+  transition: max-height 600ms;
+  will-change: max-height;
 }
 
-.specifications .items .item-title {
+/* .specifications .columns .column {
+  margin-top: 18px;
+} */
+
+/* .specifications .columns .column:nth-child(3) .value {
+  margin-top: 0;
+} */
+
+.specifications .item-title {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: #fff;
+  margin-top: 18px;
 }
 
-.specifications .items .item-values .value {
+.specifications .column:nth-child(1) .item-title:nth-child(1) {
+  margin-top: 0;
+}
+
+.specifications .value {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -472,17 +487,13 @@ nav li a {
 .specifications .more-btn svg {
   width: 20px;
   height: 20px;
+  fill: #6eb8ff;
+  transition: transform 600ms;
+  will-change: transform;
 }
 
-.specifications .items {
-  overflow: hidden;
-  max-height: 260px;
-  transition: max-height 300ms;
-  will-change: max-height;
-}
-
-.specifications .items.expanded {
-  max-height: 300vh;
+.specifications .more-btn.expanded svg {
+  transform: rotate(180deg);
 }
 
 /** --- FAQ --- **/
@@ -501,12 +512,17 @@ nav li a {
   border-bottom: 1px solid #37383e;
 }
 
+.faq-item:nth-last-child(1) {
+  border-bottom: 0;
+}
+
 .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 15px;
   gap: 20px;
+  cursor: pointer;
 }
 
 .faq-question h3 {
@@ -739,26 +755,39 @@ nav li a {
     margin-inline: -40px;
   }
 
-  .specifications .items {
+  .specifications .columns {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 18px;
   }
 
-  .specifications .items .item {
-    width: calc(50% - 20px);
-    height: min-content;
+  .specifications .column {
+    width: calc(50% - 18px);
+  }
+
+  .specifications .column:nth-child(1) {
+    order: 1;
+  }
+  .specifications .column:nth-child(2) {
+    order: 3;
+  }
+  .specifications .column:nth-child(3) {
+    order: 2;
+  }
+  .specifications .column:nth-child(4) {
+    order: 4;
+  }
+
+  .specifications .item-title:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .specifications .column:nth-child(3) .value:nth-child(1) {
+    margin-top: 0;
   }
 
   .specifications .more-btn {
     margin-top: 24px;
-  }
-
-  .specifications .items {
-    overflow: hidden;
-    max-height: 260px;
-    transition: max-height 300ms;
-    will-change: max-height;
   }
 
   /** --- FAQ --- **/
@@ -1034,6 +1063,45 @@ nav li a {
 
   .watch-online .text-container .body-text {
     margin-top: 24px;
+  }
+
+  /** --- DEVICE-SPECIFICATIONS --- **/
+  .device-specifications {
+    margin-top: 120px;
+  }
+
+  .specifications {
+    margin-top: 40px;
+    padding: 40px 24px;
+    margin-inline: 0;
+  }
+
+  .specifications .columns {
+    max-height: unset;
+    gap: 24px;
+  }
+
+  .specifications .column {
+    width: calc(25% - 18px);
+    border-left: 1px solid #37383e;
+  }
+
+  .specifications .column:nth-child(1) {
+    order: 1;
+  }
+  .specifications .column:nth-child(2) {
+    order: 2;
+  }
+  .specifications .column:nth-child(3) {
+    order: 3;
+  }
+  .specifications .column:nth-child(4) {
+    order: 4;
+    border: none;
+  }
+
+  .specifications .more-btn {
+    display: none;
   }
 
   /** --- FAQ --- **/
