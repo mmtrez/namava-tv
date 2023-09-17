@@ -6,12 +6,7 @@ const specificationsItems = document.querySelector('.specifications .columns');
 const specificationsTrigger = document.querySelector('.specifications .more-btn');
 const faqItems = document.querySelectorAll('.faq-item');
 const faqTriggers = document.querySelectorAll('.faq-question');
-const introductionLink = document.querySelector('#introduction-link');
-const specificationsLink = document.querySelector('#specifications-link');
-const purchaseLink = document.querySelector('#purchase-link');
-const namavaDeviceComponent = document.querySelector('.namava-tv-device');
-const specificationsComponent = document.querySelector('.device-specifications');
-const purchaseComponent = document.querySelector('.purchase');
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
 let lastScroll = 0;
 
@@ -46,10 +41,8 @@ const handlePlayVideo = () => {
 };
 
 const handleVideoEnd = () => {
-  if (video.ended) {
-    videoPlayBtn.classList.remove('hide');
-    video.removeAttribute('controls');
-  }
+  videoPlayBtn.classList.remove('hide');
+  video.removeAttribute('controls');
 };
 
 // ** SPECIFICATIONS EXPAND
@@ -94,9 +87,18 @@ const handleToggleFaq = (e) => {
   });
 };
 
-// **Events
+// ** ANCHOR SMOOTH SCROLL
+const handleAnchorScroll = (e, anchor) => {
+  e.preventDefault();
+
+  const scrollToEl = document.querySelector(anchor.getAttribute('href'));
+
+  if (scrollToEl) scrollToEl.scrollIntoView({block: 'center', behavior: 'smooth'});
+};
+
+// ** Events
 videoPlayBtn.addEventListener('click', handlePlayVideo);
-video.addEventListener('timeupdate', handleVideoEnd);
+video.addEventListener('ended', handleVideoEnd);
 
 specificationsTrigger.addEventListener('click', handleExpandCollapse);
 
@@ -106,14 +108,6 @@ faqTriggers.forEach((faqTrigger) =>
 
 window.addEventListener('scroll', handleNavScroll);
 
-introductionLink.addEventListener('click', () => {
-  namavaDeviceComponent.scrollIntoView({block: 'center', behavior: 'smooth'});
-});
-
-specificationsLink.addEventListener('click', () => {
-  specificationsComponent.scrollIntoView({block: 'center', behavior: 'smooth'});
-});
-
-purchaseLink.addEventListener('click', () => {
-  purchaseComponent.scrollIntoView({block: 'center', behavior: 'smooth'});
-});
+anchorLinks.forEach((anchor) =>
+  anchor.addEventListener('click', (e) => handleAnchorScroll(e, anchor)),
+);
