@@ -4,7 +4,392 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>نماوا تی وی</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <a class="logo-container" href="#">
+          <img class="logo" src="./assets/images/logo.png" alt="نماوا تی‌وی" />
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="#introduction-link">معرفی</a>
+            </li>
+            <li>
+              <a href="#specifications-link">مشخصات فنی</a>
+            </li>
+            <li>
+              <a href="#purchase-link">خرید</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="short-intro">
+        <div class="img-container">
+          <img src="./assets/images/hero.png" alt="نماوا تی وی" />
+        </div>
+        <div class="text-container">
+          <h1 class="title">با خیال راحت فیلم و سریال ببینید!</h1>
+          <p class="body-text">
+            «نماوا تی‌وی» جدیدترین محصول نماواست که با اتصال آن به تلویزیون، می‌توانید به
+            هزاران ساعت فیلم و سریال دسترسی داشته باشید و همچنین با نصب اپلیکیشن‌های محبوب
+            خود، بدون هیچ محدودیتی از قابلیت‌های متنوع آن لذت ببرید. با خرید این دستگاه،
+            اشتراک یک ساله نماوا به همراه یک سال اشتراک رایگان اینترنت شاتل به شما هدیه
+            داده می‌شود. حجم اینترنت مصرفی نماوا برای مشترکین شاتل رایگان و برای ما بقی
+            سرویس دهندگان نیم بهاء محاسبه می‌شود.
+          </p>
+        </div>
+      </section>
+      <section class="pricing">
+        <div class="subscriptions">
+          <div class="item">
+            <img src="./assets/images/namava-package.png" alt="یک سال اشتراک نماوا" />
+            <h3>یکسال اشتراک رایگان نماوا</h3>
+            <span class="discount-text">
+              <span class="price"> ۸۰۰,۰۰۰ تومان </span>
+            </span>
+          </div>
+          <div class="item">
+            <img src="./assets/images/shatel-package.png" alt="یک سال اشتراک نماوا" />
+            <h3>یکسال اینترنت رایگان شاتل</h3>
+            <span class="discount-text">
+              <span class="price"> ۱۵۰,۰۰۰ تومان </span>
+            </span>
+          </div>
+        </div>
+        <div class="table-section">
+          <div class="table">
+            <div class="row">
+              <h3>قیمت اولیه پکیج</h3>
+              <div class="price-container">
+                <span class="discount-text">
+                  <span class="price"> ۲,۴۰۰,۰۰۰ </span>
+                </span>
+                <span class="label">تومان</span>
+              </div>
+            </div>
+            <div class="row">
+              <span class="discount-tag">تخفیف</span>
+              <span class="price"> ۹۵۰,۰۰۰ تومان </span>
+            </div>
+            <div class="row">
+              <h3>قیمت برای شما</h3>
+              <span>
+                <span class="price payable"> ۱,۴۵۰,۰۰۰ تومان </span>
+              </span>
+            </div>
+          </div>
+          <a href="#" class="btn-link">
+            <span>خرید از</span>
+            <img src="./assets/images/digikala.png" alt="خرید از دیجیکالا" />
+          </a>
+        </div>
+      </section>
+      <section class="namava-tv-device" id="introduction-link">
+        <div class="img-container">
+          <img src="./assets/images/namava-tv-device.png" alt="نماوا تی وی" />
+        </div>
+        <div class="text-container">
+          <h1 class="title">دستگاه نماوا TV چیست؟</h1>
+          <p class="body-text">
+            نماوا TV یک دستگاه کوچک است که به راحتی به تلویزیون شما وصل می شود. شما می
+            توانید از طریق این دستگاه کوچک بودن نیاز به لپ تاپ و کامپیوتر تنها با داشتن یک
+            تلویزیون معمولی، هرچقدر که خواستید فیلم و سریال ببینید.
+          </p>
+        </div>
+      </section>
+      <section class="device-video">
+        <video poster="./assets/images/namava-tv-device-poster.png">
+          <source src="./assets/namava-tv-device.mp4" type="video/mp4" />
+        </video>
+        <div role="button" class="play-btn">
+          <svg>
+            <use xlink:href="../assets/icons.svg#play"></use>
+          </svg>
+        </div>
+      </section>
+      <section class="config-logos">
+        <div class="item">
+          <img src="./assets/images/config-4k.png" alt="وضوح تصویر بسیار بالای 4k" />
+          <p class="item-title">وضوح تصویر بسیار بالای 4k</p>
+        </div>
+        <div class="item">
+          <img src="./assets/images/config-ram.png" alt="16GB حافظه داخلی" />
+          <p class="item-title">16GB حافظه داخلی</p>
+        </div>
+        <div class="item">
+          <img src="./assets/images/config-arm.png" alt="پردازنده 4 هسته ARM" />
+          <p class="item-title">پردازنده 4 هسته ARM</p>
+        </div>
+        <div class="item">
+          <img src="./assets/images/config-wireless.png" alt="وایرلس 2 بنده" />
+          <p class="item-title">وایرلس 2 بنده</p>
+        </div>
+      </section>
+      <section class="remote-control">
+        <div class="img-container">
+          <img
+            src="./assets/images/remote-control.png"
+            alt="ریموت هوشمند به همراه میکروفون داخلی"
+          />
+        </div>
+        <div class="text-container">
+          <h1 class="title">دارای ریموت هوشمند به همراه میکروفون داخلی</h1>
+          <p class="body-text">
+            طراحی متفاوت و به روز، استفاده از تکنولوژی بی سیم به جای مادون قرمز و سهولت
+            دسترسی به محتوا از طریق جستجوی صوتی، از ویژگی‌های فنی نماوا تی‌‍وی است.
+          </p>
+        </div>
+      </section>
+      <section class="android-tv">
+        <div class="img-container">
+          <img src="./assets/images/android-tv-1.png" alt="android tv به سبک فارسی" />
+        </div>
+        <div class="text-container">
+          <h1 class="title">android tv به سبک فارسی</h1>
+          <p class="body-text">
+            سیستم عامل android tv نسخه 9 ، با تمامی امکاناتی که دارد، این بار تجربه‌ای
+            شیرین از رابط کاربری و آنچه از تلویزیون هوشمندتان به زبان فارسی انتظار دارید
+            را برای شما فراهم می‌کند.
+          </p>
+        </div>
+      </section>
+      <section class="watch-online">
+        <div class="img-container">
+          <img
+            src="./assets/images/android-tv-2.png"
+            alt="تماشای آلاین هزاران فیلم و سریال"
+          />
+        </div>
+        <div class="text-container">
+          <h1 class="title">تماشای آنلاین هزاران فیلم و سریال در صفحه تلویزیون شما</h1>
+          <p class="body-text">
+            با کمک دستگاه نماوا تی وی، دستگاه تلویزیون خود را هوشمند کنید و در کنار
+            خانواده به تماشای هزاران فیلم و سریال در نماوا بنشینید.
+          </p>
+        </div>
+      </section>
+      <section class="device-specifications" id="specifications-link">
+        <h1 class="title">مشخصات دستگاه</h1>
+        <div class="specifications">
+          <div class="columns">
+            <div class="column">
+              <h2 class="item-title">رم</h2>
+              <span class="value">۲ گیگابایت</span>
+              <h2 class="item-title">حافظه داخلی</h2>
+              <span class="value">۱۶ گیگابایت</span>
+              <h2 class="item-title">پردازنده</h2>
+              <span class="value">چهار هسته ای ARM</span>
+              <h2 class="item-title">سیستم عامل</h2>
+              <span class="value">Android Tv version 9</span>
+            </div>
+            <div class="column">
+              <h2 class="item-title">شبکه</h2>
+              <span class="value">Wireless: Wi-Fi 802.11 a/b/g/n/ac</span>
+              <span class="value">dual band</span>
+              <span class="value">Ethernet: Wired LAN</span>
+              <h2 class="item-title">وضوح تصویر</h2>
+              <span class="value">4K (Ultra-HD)@60fps</span>
+              <h2 class="item-title">درگاه های ارتباطی</h2>
+              <span class="value">USB 3.0</span>
+              <span class="value">USB 2.0</span>
+            </div>
+            <div class="column">
+              <span class="value">Micro SD/TF</span>
+              <span class="value">AV</span>
+              <span class="value">HDMI</span>
+              <span class="value">LAN</span>
+              <span class="value">SPDIF (Optical Sound Output)</span>
+              <h2 class="item-title">برنامه ها</h2>
+              <span class="value">نسخه اختصاصی نماوا</span>
+              <span class="value">Google play for Android TV</span>
+              <span class="value">اپلیکیشن های کاربردی مخصوص تلویزیون</span>
+            </div>
+            <div class="column">
+              <h2 class="item-title">اقلام همراه</h2>
+              <span class="value">نماوا تی‌وی</span>
+              <span class="value">ریموت هوشمند وایرلس همراه میکروفون داخلی</span>
+              <span class="value">دانگل وایرلس</span>
+              <span class="value">آداپتور</span>
+              <span class="value">کابل hdmi</span>
+              <span class="value">کارت گارانتی</span>
+              <span class="value">دفترچه راهنما</span>
+            </div>
+          </div>
+          <button class="more-btn">
+            <span>اطلاعات بیشتر</span>
+            <svg class="chev-down">
+              <use xlink:href="../assets/icons.svg#chev-down"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="faq">
+        <h1 class="title">سوالات متداول</h1>
+        <div class="faq-container">
+          <div class="faq-item" data-faq="1">
+            <div class="faq-question">
+              <h3>سیستم عامل دستگاه نماوا تی وی چیست؟</h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                سیستم عامل NSB، اندروید TV نسخه 9 است و رابط کاربری اختصاصی نماوا و Google
+                Play Store مخصوص تلویزیون روی آن نصب شده است.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-faq="2">
+            <div class="faq-question">
+              <h3>آیا قابلیت نصب Google Play در نماوا تی وی وجود دارد؟</h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                بله، به راحتی می توانید با استفاده از Google Play Store موجود در دستگاه
+                اپلیکیشن مورد علاقه خود را نصب کنید.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-faq="3">
+            <div class="faq-question">
+              <h3>آیا قابلیت نصب اپلیکیشن های مختلف در نماوا تی وی وجود دارد؟</h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                بله، نصب اپلیکیشن از طریق تمامی فروشگاه‌های معتبر اندرویدی روی این دستگاه
+                امکان‌پذیر است.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-faq="4">
+            <div class="faq-question">
+              <h3>آیا محدودیتی برای نصب اپلیکیشن های خاص در نماوا تی وی وجود دارد؟</h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                خیر، هیچ گونه محدودیتی برای نصب اپلیکیشن‌های دلخواهتان بر روی نماوا تی وی
+                ندارید.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-faq="5">
+            <div class="faq-question">
+              <h3>
+                آیا می توان اپلیکیشن را از طریق فلش و یا کارت حافظه بر روی دستگاه نصب کرد؟
+              </h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                بله، شما می‌توانید فایل نصبی اپلیکیشن مورد نظرتان را (با فرمت apk) از طریق
+                هر دو درگاه ورودی و با استفاده از فایل منیجر پیش‌فرض، روی دستگاه خود نصب
+                کنید.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-faq="6">
+            <div class="faq-question">
+              <h3>آیا امکان نصب بازی روی این دستگاه وجود دارد؟</h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                بله می توانید بازی های مخصوص اندروید TV را از طرق مختلف نصب و از آن‌ها
+                استفاده کنید.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" data-faq="7">
+            <div class="faq-question">
+              <h3>چگونه طول عمر مفید باتری ریموت کنترل را افزایش دهیم؟</h3>
+              <svg>
+                <use xlink:href="../assets/icons.svg#chev-down"></use>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                در زمان خاموش بودن دستگاه از فشردن دکمه های آن پرهیز کنید، در صورتی که
+                دستگاه خاموش است و برق در دانگل وایرلس آن وجود ندارد، فشردن دکمه های
+                ریموت، آن را به حالت Pair کردن با دانگل خود می برد و بیشترین مصرف باتری را
+                خواهد داشت، هربار فشردن هر دکمه بر روی ریموت به معنی ۱۵ ثانیه تکرار این
+                اتفاق و اتمام باتری داخل ریموت است. پیشنهاد ما، استفاده از باتری باکیفیت و
+                جدید است.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="purchase" id="purchase-link">
+        <div class="img-container">
+          <img src="./assets/images/tv-box.png" alt="خرید نماوا تی‌وی" />
+        </div>
+        <div class="pricing">
+          <div class="subscriptions">
+            <div class="item">
+              <img src="./assets/images/namava-package.png" alt="یک سال اشتراک نماوا" />
+              <h3>یکسال اشتراک رایگان نماوا</h3>
+              <span class="discount-text">
+                <span class="price"> ۸۰۰,۰۰۰ تومان </span>
+              </span>
+            </div>
+            <div class="item">
+              <img src="./assets/images/shatel-package.png" alt="یک سال اشتراک نماوا" />
+              <h3>یکسال اینترنت رایگان شاتل</h3>
+              <span class="discount-text">
+                <span class="price"> ۱۵۰,۰۰۰ تومان </span>
+              </span>
+            </div>
+          </div>
+          <div class="table-section">
+            <div class="table">
+              <div class="row">
+                <h3>قیمت اولیه پکیج</h3>
+                <div class="price-container">
+                  <span class="discount-text">
+                    <span class="price"> ۲,۴۰۰,۰۰۰ </span>
+                  </span>
+                  <span class="label">تومان</span>
+                </div>
+              </div>
+              <div class="row">
+                <span class="discount-tag">تخفیف</span>
+                <span class="price"> ۹۵۰,۰۰۰ تومان </span>
+              </div>
+              <div class="row">
+                <h3>قیمت برای شما</h3>
+                <span>
+                  <span class="price payable"> ۱,۴۵۰,۰۰۰ تومان </span>
+                </span>
+              </div>
+            </div>
+            <a href="#" class="btn-link">
+              <span>خرید از</span>
+              <img src="./assets/images/digikala.png" alt="خرید از دیجیکالا" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
